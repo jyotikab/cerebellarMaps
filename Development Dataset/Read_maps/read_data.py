@@ -16,9 +16,9 @@ import pandas as pd
 # Read the raw data from here
 data_dir = "/home/bahuguna/Work/Isope_data/Isope_data_cerebellar_maps/"
 # Store the processed data here
-data_target_dir = "/home/bahuguna/Work/Isope_data/"
+data_target_dir = "/../../data/"
 # Target directory for the figures
-fig_target_dir = "/home/bahuguna/Work/Isope_data/Isope_data_analysis/figs/"
+fig_target_dir = "/../../figs/"
 
 
 # Name of the subfolder with developmental data
@@ -26,6 +26,18 @@ development = "DEVELOPMENT"
 
 zone_names = ["B_contra","AX_contra","Alat_contra","Amed_contra","Amed_ipsi","Alat_ipsi","AX_ipsi","B_ipsi"]
 zone_lims = [(-233,-133),(-133,-108),(-108,-58),(-58,0),(0,50),(50,100),(100,125),(125,235)]
+
+'''
+B_contra : -233 to -133
+AX_contra : -133 to -108
+Alat_contra : - 108 to -58
+Amed_contra : -58 to 0
+
+Amed ipsi :0 to 50
+Alat_ipis = 50 to 100
+AX_ipsi : 100 to 125
+B_ipis : 125 to 285
+'''
 
 data = pd.DataFrame()
 
