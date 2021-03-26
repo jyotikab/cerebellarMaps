@@ -15,9 +15,9 @@ import pandas as pd
 # Read the raw data from here
 data_dir = "/home/bahuguna/Work/Isope_data/Isope_data_cerebellar_maps/"
 # Store the processed data here
-data_target_dir = "/home/bahuguna/Work/Isope_data/"
+data_target_dir = "../../data/"
 # Target directory for the figures
-fig_target_dir = "/home/bahuguna/Work/Isope_data/Isope_data_analysis/figs/"
+fig_target_dir = "../../figs/"
 
 
 # Name of the subfolder with developmental data
