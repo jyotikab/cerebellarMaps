@@ -45,12 +45,12 @@ for dy in days:
     fig.suptitle("Days:"+dy,fontsize=15,fontweight='bold') 
     for i,(rn,cn) in enumerate(zip(data_slice["rat_num"],data_slice["cell_num"])):
         subfig_hands.append(fig.add_subplot(rows,2,i+1))
-        if str(cn) in list(data_2d[dy][rn].keys()):
-            map_2d = data_2d[dy][rn][str(cn)]["map"]
+        if str(cn) in list(data_2d[dy][str(rn)].keys()):
+            map_2d = data_2d[dy][str(rn)][str(cn)]["map"]
             r,c = np.shape(map_2d)
             subfig_hands[-1].pcolor(map_2d,cmap=cm.hot)
 
-            for i1,iz in enumerate(data_2d[dy][rn][cn]["ind_zones"]):
+            for i1,iz in enumerate(data_2d[dy][str(rn)][str(cn)]["ind_zones"]):
                 if len(iz) == 0:
                     continue
     
