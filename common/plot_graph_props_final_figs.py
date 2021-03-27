@@ -36,7 +36,7 @@ panel_name = dict({"modularity_index":"H","participation_pos":"I","module_degree
 
 
 if data_type == "subtype":
-    graph_prop_df = pd.read_csv(data_dir+"graph_properties_pandas_all.csv")
+    graph_prop_df = pd.read_csv(data_target_dir+"graph_properties_pandas_all.csv")
     short_names = [ x.split('-')[0]  for x in graph_prop_df["names"]]
     graph_prop_df["short_names"] = short_names
     phenotypes = np.array(graph_prop_df["subtype"])
@@ -48,7 +48,7 @@ if data_type == "subtype":
     graph_prop_df["subtype"] = phenotypes
     fig_target_dir = "../figs/"
 elif data_type == "development":
-    graph_prop_df = pd.read_csv(data_dir+"graph_properties_pandas_days.csv")
+    graph_prop_df = pd.read_csv(data_target_dir+"graph_properties_pandas_days_all.csv")
     fig_target_dir = "../figs/"
 
 if data_type == "subtype":
@@ -175,11 +175,6 @@ def plot_graph_prop(data,gamma,which_feat,data_type,with_phenotypes=False):
     pickle.dump(greater_sig,open(data_target_dir+filename+".pickle","wb"))
 
 
-    '''
-    greater_sig_kw = sp_stats.kruskal(all_data[0],all_data[1],all_data[2],all_data[3])
-    print("kruskal wallis of all distributions")
-    print(greater_sig_kw) 
-    '''
 
     g1.axes.set_title(tit,fontsize=15,fontweight='bold')
     g1.axes.set_ylabel(g1.axes.get_ylabel(),fontsize=15,fontweight='bold')
