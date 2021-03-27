@@ -35,7 +35,7 @@ if data_type == "subtype":
     data = pd.read_csv(data_target_dir+"meta_data.csv")
     
     files = glob.glob(data_target_dir+"graph_properties_norm_*.pickle")
-    cov_2d_dict =  pickle.load(open(data_target_dir+"covariance_maps_norm.pickle","rb"))
+    #cov_2d_dict =  pickle.load(open(data_target_dir+"covariance_maps_norm.pickle","rb"))
 
 elif data_type == "development":
     development = "DEVELOPMENT"
@@ -43,7 +43,7 @@ elif data_type == "development":
     data_2d = pickle.load(open(data_target_dir+"data_2d_maps_days.pickle","rb"))
     data = pd.read_csv(data_target_dir+"meta_data_days.csv")
 
-    cov_2d_dict =  pickle.load(open(data_target_dir+"covariance_maps_days_norm.pickle","rb"))
+    #cov_2d_dict =  pickle.load(open(data_target_dir+"covariance_maps_days_norm.pickle","rb"))
 
     files = glob.glob(data_target_dir+"graph_properties_days_norm_*.pickle")
 
