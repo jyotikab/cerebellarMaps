@@ -233,8 +233,8 @@ for t in np.arange(0,5):
 
 
 
-    pickle.dump(cov_2d_dict,open(data_dir+"covariance_maps_days_"+mat_type+".pickle","wb"))
-    pickle.dump(graph_properties,open(data_dir+"graph_properties_days_"+mat_type+"_"+str(seed)+".pickle","wb"))
+    pickle.dump(cov_2d_dict,open(data_target_dir+"covariance_maps_days_"+mat_type+".pickle","wb"))
+    pickle.dump(graph_properties,open(data_target_dir+"graph_properties_days_"+mat_type+"_"+str(seed)+".pickle","wb"))
 
 
 
