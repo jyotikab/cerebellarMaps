@@ -268,15 +268,15 @@ def merge_df_seeds(files):
 
 
 if data_type == "subtype":
-    #merge_df1 = merge_df_seeds(files1)
-    #merge_df1.to_csv(data_dir+"graph_properties_pandas_for_behav_all.csv") # everything
+    merge_df1 = merge_df_seeds(files1)
+    merge_df1.to_csv(data_target_dir+"graph_properties_pandas_for_behav_all.csv") # everything
 
     merge_df2 = merge_df_seeds(files2)
     merge_df2.to_csv(data_target_dir+"graph_properties_pandas_all.csv") # nonan
 
 elif data_type == "development":
-    #merge_df1 = merge_df_seeds(files1)
-    #merge_df1.to_csv(data_dir+"graph_properties_pandas_for_behav_days_all.csv")
+    merge_df1 = merge_df_seeds(files1)
+    merge_df1.to_csv(data_target_dir+"graph_properties_pandas_for_behav_days_all.csv")
 
     merge_df2 = merge_df_seeds(files2)
     merge_df2.to_csv(data_target_dir+"graph_properties_pandas_days_all.csv")
